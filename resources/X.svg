@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <line x1="5" y1="5" x2="195" y2="195" style="
+    stroke: white;
+    stroke-width: 9px;
+    stroke-linecap: round;"
+    />
+    <line x1="5" y1="195" x2="195" y2="5" style="
+    stroke: white;
+    stroke-width: 9px;
+    stroke-linecap: round;"
+    />
+</svg>

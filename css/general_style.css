@@ -1,0 +1,42 @@
+/*BEM - Block, Elements(__), Modifiers(--)*/
+
+:root {
+    --line-width: 2;
+    --line-length: calc(var(--line-width) * 2 + 100);
+}
+
+body {
+    background-color: black;
+    display: flex;
+}
+
+.svg_frame {
+    width: 50vw;
+    height: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.board {
+    align-self: center;
+    justify-self: center;
+
+}
+
+.board__line {
+    stroke: white;
+    stroke-width: var(--line-width);
+    stroke-linecap: round;
+}
+
+.board__clickable_area {
+    background-color: transparent;
+}
+
+.board__clickable_area:hover {
+    cursor: pointer;
+}
+
+.board__unclickable_area {
+    cursor: default;
+}
