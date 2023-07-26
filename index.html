@@ -17,7 +17,7 @@
             <line class="board__line" x1="1" y1="72" x2="107" y2="72"></line>
             <!---->
             <!--the squares in wich to place the Xs and Os-->
-            <image width="34" height="34" x='1' y="1" class="board__clickable_area" data-col="0" data-row="0" />
+            <image width="34" height="34" x='1' y="1" class="board__clickable_area" data-col="0" data-row="0"/>
             <image width="34" height="34" x="37" y="1" class="board__clickable_area" data-col="1" data-row="0"/>
             <image width="34" height="34" x="73" y="1" class="board__clickable_area" data-col="2" data-row="0"/>
             <image width="34" height="34" x="1" y="37" class="board__clickable_area" data-col="0" data-row="1"/>
@@ -29,6 +29,34 @@
             <!---->
         </svg>
     </div>
+    <div class="game_over_screen">
+        <h1 style="text-decoration: underline; font-size: 3rem; margin-bottom: 0.25rem;">Game Over</h1>
+        <h2 id="anounce_the_winner-js"></h3>
+        <button onClick="window.location.reload();" style="font-size: 1.5rem;">Restart</button>
+    </div>
+    <style>
+        .game_over_screen {
+            display: none;/*changes to flex in js*/
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 15rem;
+            width: max(25rem, 30vw);
+            border-style: solid;
+            border-radius: 25px;
+            border-width: .25rem;
+            border-color: grey;
+            background-color: white;
+        }
+        #anounce_the_winner-js {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+    </style>
     <script src="js/game.js"></script>
 </body>
 </html>

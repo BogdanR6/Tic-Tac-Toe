@@ -11,10 +11,12 @@ body {
 }
 
 .svg_frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50vw;
     height: auto;
-    margin-left: 25%;
-    margin-right: 25%;
 }
 
 .board {

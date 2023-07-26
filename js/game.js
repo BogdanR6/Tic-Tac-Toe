@@ -89,15 +89,8 @@ function gameOver(winner, line) {
     //the xlink namespace must be used for the images href
     document.getElementsByClassName("board")[0].appendChild(crossTheWinner);
     //
-    const GOScreen = document.createElement("div"); 
-    {//creating the G(ame)O(ver)Screen
-        const upperArch = document.createElement("div");
-        const mainForm = document.createElement("div");
-        {//creating the mainForm
-
-        }
-    }
-
+    document.getElementById("anounce_the_winner-js").innerText = winner.toUpperCase() + " WON!";
+    document.getElementsByClassName("game_over_screen")[0].style.display = 'flex';
 }
 
 function disableClick(element) {
