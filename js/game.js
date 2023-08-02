@@ -1,4 +1,5 @@
 let board = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']];
+let draw = false;
 let x_nr = 0;//number of X's
 let o_nr = 0;//number of 0's
 let x = true;//used to alternate between X and 0
@@ -70,17 +71,28 @@ function checkForWinners(contender) {
         gameOver(contender, 8);
         return;
     }
+    draw = true; 
+    for (let i = 0; i < 3; ++i) {
+        for (let j = 0; j < 3; ++j) 
+            if (board[i][j] == '-')
+                draw = false;
+    }
+    if (draw)
+        gameOver('-', null)
 }
 
 function gameOver(winner, line) {
-    console.log("Game Over!");
-    console.log(winner + " won the game!");
     //disableClick for all
     $('.board__clickable_area').each(function() {
         $(this).removeClass('board__clickable_area');
         $(this).addClass('board__unclickable_area');
     });
     //
+    if (winner == '-' && draw) {
+        document.getElementById("anounce_the_winner-js").innerText = "DRAW!";
+        document.getElementsByClassName("game_over_screen")[0].style.display = 'flex';
+        return;
+    }
     const crossTheWinner = document.createElementNS("http://www.w3.org/2000/svg", "image");
     crossTheWinner.setAttribute("width", "108");
     crossTheWinner.setAttribute("height", "108");
